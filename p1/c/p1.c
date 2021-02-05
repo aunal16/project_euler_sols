@@ -4,7 +4,7 @@
 /* INITIALIZE VARIABLES */
 int num1 = 3;		// smaller num
 int num2 = 5;		// larger num
-int num_final = 10;	// limit num
+int num_final = 1000;	// limit num
 
 int main(void)
 {
