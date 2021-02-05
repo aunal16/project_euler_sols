@@ -1,7 +1,7 @@
 # INITIALIZATIONS
 num1 = 3        # small num
 num2 = 5        # larger num
-num_end = 10    # limit num
+num_end = 1000    # limit num
 
 # MAIN PROGRAM
 if __name__ == "__main__":
