@@ -1,7 +1,7 @@
 # INITIALIZE VARIABLES
-num_prev = 1;       # first Fibonacci number
-num_next = 2;       # second Fibonacci number
-num_lim = 4000000;  # limit for the largest Fibonacci number
+num_prev = 1        # first Fibonacci number
+num_next = 2        # second Fibonacci number
+num_lim = 4000000   # limit for the largest Fibonacci number
 
 # MAIN PROGRAM
 if __name__ == "__main__":
