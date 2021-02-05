@@ -12,7 +12,7 @@ int main()
 	/* Assuming num_final > num1 */
 	int sum = num1;
 	int i;
-	for(i = 4; i<num_final; i++)
+	for(i = num1+1; i<num_final; i++)
 	{
 		if((i % num1 == 0) || (i % num2 == 0))
 		{
