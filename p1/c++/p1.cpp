@@ -19,6 +19,8 @@ int main()
 			sum += i;
 		}
 	}
-	printf("The summation of the integers up to %d are %d\n", num_final, sum);
+
+	std::cout << "The summation of the integers up to " << num_final << " are " << sum << "\n";
+	// printf("The summation of the integers up to %d are %d\n", num_final, sum);
 	return 0;
 }
