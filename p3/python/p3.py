@@ -18,11 +18,17 @@ if __name__ == "__main__":
     # Remove 2s from the number so that it becomes odd
     if num % 2 == 0: largest, my_num = eliminate_prime(my_num, 2)
 
-    # From now on, the number is guaranteed to be odd
+    # From now on, the number is guaranteed to be odd. The algo
+    # rith below uses an algorithm to go up until sqrt(num); ho
+    # wever, it damages the case for my_num = 3 or 5 since thei
+    # r square root is smaller than 3 (does not enter for loop.
+    # Thus, my_num == 3 and my_num == 5 cases must be handled m
+    # anually.
     for i in range(3, int(math.sqrt(my_num))+1, 2):
         if my_num % i == 0:
             largest, my_num = eliminate_prime(my_num, i)
 
+    if my_num == 3 or my_num == 5: largest = my_num
     if largest == 1: largest = num
 
     print("The largest prime number that divides", num, "is", largest)
