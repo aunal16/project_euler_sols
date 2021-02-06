@@ -19,7 +19,7 @@ if __name__ == "__main__":
     if num % 2 == 0: largest, my_num = eliminate_prime(my_num, 2)
 
     # From now on, the number is guaranteed to be odd
-    for i in range(3, int(my_num/2), 2):
+    for i in range(3, int(math.sqrt(my_num))+1, 2):
         if my_num % i == 0:
             largest, my_num = eliminate_prime(my_num, i)
 
