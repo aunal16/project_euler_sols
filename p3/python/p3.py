@@ -2,19 +2,27 @@
 import math
 
 # INITIALIZE NUMBER TO BE FACTORIZED
-num = 7
+num = 13195
 
-def max_prime_for_odd(x):
-    
+def eliminate_prime(x, y):
+    # This function divides x to y as long as x is divisible by y.
+    # Therefore, the returned value is not divisible by y anymore.
+    while x % y == 0:
+        x /= y
+    return (y, int(x))
 
 if __name__ == "__main__":
     largest = 1
-    if num % 2 == 0:
-        largest = 2
-        while num % 2 == 0: num /= 2
+    my_num = num
 
-    # From now on, the number is guaranteed to be odd.
-    res = max_prime_for_odd(num)
-    if res > largest: largest = res
+    # Remove 2s from the number so that it becomes odd
+    if num % 2 == 0: largest, my_num = eliminate_prime(my_num, 2)
 
-    print("Largest prime is", largest)
+    # From now on, the number is guaranteed to be odd
+    for i in range(3, my_num, 2):
+        if my_num % i == 0:
+            largest, my_num = eliminate_prime(my_num, i)
+
+    if largest == 1: largest = num
+
+    print("The largest prime number that divides", num, "is", largest)
