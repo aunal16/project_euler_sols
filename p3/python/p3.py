@@ -2,7 +2,7 @@
 import math
 
 # INITIALIZE NUMBER TO BE FACTORIZED
-num = 13195
+num = 600851475143
 
 def eliminate_prime(x, y):
     # This function divides x to y as long as x is divisible by y.
