@@ -3,15 +3,15 @@
 #include <cmath>
 
 /* INITIALIZE NUMBER TO BE FACTORIZED */
-int num = 13195;
+long num = 600851475143;
 
 /* FUNCTION DECLARATIONS */
-int eliminate_prime(int x, int y);
+long eliminate_prime(long x, long y);
 
 int main(void)
 {
-	int largest = 1;
-	int my_num = num;
+	long largest = 1;
+	long my_num = num;
 
 	/* Remove 2s from the number so that it becomes odd */
 	if (num % 2 == 0)
@@ -27,8 +27,8 @@ int main(void)
 	 * Thus, my_num == 3 and my_num == 5 cases must be handled m
 	 * anually.
 	 */
-	int i;
-	int sqrt_num = sqrt(my_num);
+	long i;
+	long sqrt_num = sqrt(my_num);
 
 	for(i = 3; i <= sqrt_num; i += 2)
 	{
@@ -49,7 +49,7 @@ int main(void)
 	return 0;
 }
 
-int eliminate_prime(int x, int y)
+long eliminate_prime(long x, long y)
 {
 	/* This function divides x to y as long as x is divisible by y.
 	 * Therefore, the returned value is not divisible by y anymore.
