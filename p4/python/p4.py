@@ -1,5 +1,11 @@
+# VARIABLES
+palindromes = set()
+# Smallest and largest 2-digit number
+digit = 2
+n_min = 10**(digit-1)
+n_max = 10**(digit)
 
-
+# FUNCTIONS
 def is_palindrome(x):
     x_str = str(x)
     check = True
@@ -9,7 +15,12 @@ def is_palindrome(x):
 
     return check
 
+# MAIN PROGRAM
 if __name__ == "__main__":
+    for i in range(n_min, n_max):
+        for j in range(n_min, n_max):
+            multiplication = i * j
+            if is_palindrome(multiplication):
+                palindromes.add(multiplication)
 
-    
-
+    print(max(palindromes))
