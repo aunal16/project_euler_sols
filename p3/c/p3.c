@@ -3,7 +3,7 @@
 #include <math.h>
 
 /* INITIALIZE NUMBER TO BE FACTORIZED */
-unsigned long num = 13195;
+unsigned long num = 600851475143;
 
 /* FUNCTIONS DECLARATIONS */
 unsigned long eliminate_prime(unsigned long, unsigned long);
