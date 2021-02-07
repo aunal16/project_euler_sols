@@ -1,7 +1,7 @@
 # VARIABLES
 palindromes = set()
 # Smallest and largest 2-digit number
-digit = 2
+digit = 3
 n_min = 10**(digit-1)
 n_max = 10**(digit)
 
