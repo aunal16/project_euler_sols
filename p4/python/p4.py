@@ -23,4 +23,4 @@ if __name__ == "__main__":
             if is_palindrome(multiplication):
                 palindromes.add(multiplication)
 
-    print(max(palindromes))
+    print("Maximum palindrome that is a multiplication of " + str(digit) + "-digit numbers is", max(palindromes))
