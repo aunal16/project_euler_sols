@@ -22,8 +22,12 @@ int main(void)
 		for(j = n_min; j <= n_max; j++)
 		{
 			int multiplication = i * j;
+			if (is_palindrome(multiplication))
+				palindromes.insert(multiplication);
 		}
 	}
+
+	std::cout << "Maximum palindrome that is a multiplication of " << digit << "-digit numbers is " << *palindromes.rbegin() << "\n";
 
 	return 0;
 }
