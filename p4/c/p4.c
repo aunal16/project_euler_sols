@@ -40,6 +40,9 @@ int main(void)
 	int max_element = get_max(palindromes);
 	printf("%d\n", max_element);
 
+	/* Free dynamically allocated integer array palindromes */
+	free(palindromes);
+
 	return 0;
 }
 
