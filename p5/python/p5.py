@@ -1,6 +1,6 @@
 import numpy as np
 
-limit = 10
+limit = 20
 dividers = np.zeros(limit)
 
 def is_prime(x):
