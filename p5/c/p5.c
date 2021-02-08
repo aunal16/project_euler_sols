@@ -4,7 +4,7 @@
 #include <math.h>
 
 /* GLOBAL VARIABLES */
-#define limit 10
+#define limit 20
 int dividers[limit];
 
 /* FUNCTION DECLARATIONS */
