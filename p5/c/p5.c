@@ -71,8 +71,7 @@ int is_prime(int x)
 
 	int check = 1;
 	int i;
-	int sqrt_x = sqrt(x);
-	for(i = 3; i <= sqrt_x; i += 2)
+	for(i = 3; i <= sqrt(x); i += 2)
 	{
 		if (x % i == 0)
 			check = 0;
