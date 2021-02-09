@@ -1,5 +1,5 @@
 # GLOBAL VARIABLES
-limit = 10
+limit = 100
 
 # MAIN PROGRAM
 if __name__ == "__main__":
