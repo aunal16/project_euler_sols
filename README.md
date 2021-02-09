@@ -1,2 +1,2 @@
 # project_euler_sols
-This repository includes my solutions to the Project Euler problems.
+My solutions to the Project Euler problems for Python, C and C++.
