@@ -2,7 +2,7 @@
 import numpy as np
 
 # # GLOBAL VARIABLES
-n = 6
+n = 10001
 
 # # FUNCTIONS
 def is_prime(x):
