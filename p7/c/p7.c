@@ -22,6 +22,8 @@ int main(void)
 	}
 
 	printf("%dth prime is %d\n", N, num - 1);
+
+	return 0;
 }
 
 int is_prime(int x)
