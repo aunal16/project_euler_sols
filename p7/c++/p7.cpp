@@ -3,7 +3,7 @@
 #include <math.h>	//for sqrt
 
 /* GLOBAL VARIABLES */
-#define LIMIT 6
+#define LIMIT 10001
 
 /* FUNCTION PROTOTYPES */
 int is_prime(int);
