@@ -10,7 +10,7 @@ num = 73167176531330624919225119674426574742355349194934969835203127745063262395
 adjacent = 4
 # method is for time comparison of
 # different methods of products.
-method = 2
+method = 3
 time_list = list()
 
 # FUNCTIONS
@@ -28,6 +28,12 @@ def calculate_adjacent_prod(li):
     if method == 2:
         """ numpy.prod """
         result = np.prod(li)
+        time_list.append(time.time() - start_time)
+        return result
+
+    if method == 3:
+        """ meth.prod """
+        result = math.prod(li)
         time_list.append(time.time() - start_time)
         return result
 
