@@ -10,18 +10,24 @@ num = 73167176531330624919225119674426574742355349194934969835203127745063262395
 adjacent = 4
 # method is for time comparison of
 # different methods of products.
-method = 1
+method = 2
 time_list = list()
 
 # FUNCTIONS
 def calculate_adjacent_prod(li):
+    start_time = time.time()
     if method == 1:
-        start_time = time.time()
         """ for loop product """
         result = 1
         for x in li:
             result *= x
 
+        time_list.append(time.time() - start_time)
+        return result
+
+    if method == 2:
+        """ numpy.prod """
+        result = np.prod(li)
         time_list.append(time.time() - start_time)
         return result
 
@@ -33,7 +39,7 @@ if __name__ == "__main__":
 
     for i in range(len(num_str) - adjacent + 1):
         portion_str = num_str[i : i + adjacent]
-        portion_int = map(int, list(portion_str)) 
+        portion_int = list(map(int, list(portion_str)))
         adj_product = calculate_adjacent_prod(portion_int)
 
         if adj_product > max_product:
