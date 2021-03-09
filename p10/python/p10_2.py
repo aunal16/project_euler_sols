@@ -25,6 +25,7 @@ def is_prime(x):
 # MAIN PROGRAM
 if __name__ == "__main__":
     method = input('Choose the method 1 or 2: ')
+    start_time = time.time()
 
     ## METHOD 1
     # The same method in the original solution.
@@ -41,7 +42,7 @@ if __name__ == "__main__":
     # Alternative method that first stores the primes, and then
     # sums them (either with sum or np.sum)
     #primes  = np.array()
-    if method == '2':
+    elif method == '2':
         primes = []
 
         print("1: Use the built-in sum")
@@ -56,5 +57,6 @@ if __name__ == "__main__":
             summation = sum(primes)
 
     print(summation)
+    print("Duration: ", time.time() - start_time)
 
 
