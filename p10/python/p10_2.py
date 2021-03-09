@@ -43,7 +43,7 @@ if __name__ == "__main__":
     # sums them (either with sum or np.sum)
     #primes  = np.array()
     elif method == '2':
-        primes = []
+        primes = [2]
 
         print("1: Use the built-in sum")
         print("2: Use numpy sum")
@@ -55,6 +55,8 @@ if __name__ == "__main__":
                     
         if sum_choice == '1':
             summation = sum(primes)
+        elif sum_choice == '2':
+            summation = np.sum(primes)
 
     print(summation)
     print("Duration: ", time.time() - start_time)
