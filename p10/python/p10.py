@@ -1,6 +1,7 @@
 import numpy as np
 
-LIM_UP = 10
+## LIM_UP = 10
+LIM_UP = 2000000
 
 def is_prime(x):
     """
@@ -20,7 +21,7 @@ def is_prime(x):
 if __name__ == "__main__":
     summation = 0 
     if LIM_UP >=  2:
-        summation =2
+        summation = 2
         for num in range(3, LIM_UP + 1, 2):
             if is_prime(num):
                 summation += num
