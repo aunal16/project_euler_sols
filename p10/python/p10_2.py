@@ -1,5 +1,6 @@
 # IMPORT LIBRARIES
 import numpy as np
+import time         # for comparison
 
 # GLOBAL VARIABLES
 ## LIM_UP = 10
@@ -23,12 +24,36 @@ def is_prime(x):
 
 # MAIN PROGRAM
 if __name__ == "__main__":
-    summation = 0 
-    if LIM_UP >=  2:
-        summation = 2
+    method = input('Choose the method 1 or 2: ')
+
+    ## METHOD 1
+    # The same method in the original solution.
+    # Adds numbers as loop iterates, without storing the primes
+    if method == '1':
+        summation = 0 
+        if LIM_UP >=  2:
+            summation = 2
+            for num in range(3, LIM_UP + 1, 2):
+                if is_prime(num):
+                    summation += num
+
+    ## METHOD 2
+    # Alternative method that first stores the primes, and then
+    # sums them (either with sum or np.sum)
+    #primes  = np.array()
+    if method == '2':
+        primes = []
+
+        print("1: Use the built-in sum")
+        print("2: Use numpy sum")
+        sum_choice = input("Enter the summation method number: ")
+
         for num in range(3, LIM_UP + 1, 2):
-            if is_prime(num):
-                summation += num
+             if is_prime(num):
+                 primes.append(num)
+                    
+        if sum_choice == '1':
+            summation = sum(primes)
 
     print(summation)
 
