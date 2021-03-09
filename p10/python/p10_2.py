@@ -40,7 +40,12 @@ if __name__ == "__main__":
             summation = 2
             for num in range(3, LIM_UP + 1, 2):
                 if is_prime(num):
-                    summation += num
+                    # Using numpy arrays and sum turned out to 
+                    # be faster even for only two numbers. How
+                    # ever, this method is still slower than 2
+
+                    #summation += num
+                    summation = np.sum(np.array([summation, num]))
 
     ## METHOD 2
     # Alternative method that first stores the primes, and then
