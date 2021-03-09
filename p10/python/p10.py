@@ -1,8 +1,11 @@
+# IMPORT LIBRARIES
 import numpy as np
 
+# GLOBAL VARIABLES
 ## LIM_UP = 10
 LIM_UP = 2000000
 
+# FUNCTIONS
 def is_prime(x):
     """
     This function checks whether x is prime or not and returns True-False
@@ -18,6 +21,7 @@ def is_prime(x):
 
     return check
 
+# MAIN PROGRAM
 if __name__ == "__main__":
     summation = 0 
     if LIM_UP >=  2:
