@@ -36,10 +36,15 @@ if __name__ == "__main__":
                     grid[i][j+2] * grid[i][j+3]
             prod_col = grid[i+0][j] * grid[i+1][j] *\
                     grid[i+2][j] * grid[i+3][j]
-            prod_dia = grid[i][j] * grid[i+1][j+1] *\
+            prod_dia1 = grid[i][j] * grid[i+1][j+1] *\
                     grid[i+2][j+2] * grid[i+3][j+3]
+            prod_dia2 = grid[i][grid_size - j - 1] *\
+                    grid[i+1][grid_size - j - 2] *\
+                    grid[i+2][grid_size - j - 3] *\
+                    grid[i+3][grid_size - j - 4] 
 
-            max_one = max(prod_row, prod_col, prod_dia)
+            max_one = max(prod_row, prod_col, 
+                    prod_dia1, prod_dia2)
 
             if cur_max < max_one:
                     cur_max = max_one
