@@ -43,9 +43,11 @@ if __name__ == "__main__":
                     grid[i+2][grid_size - j - 3] *\
                     grid[i+3][grid_size - j - 4] 
 
+            # Get the maximum among current products.
             max_one = max(prod_row, prod_col, 
                     prod_dia1, prod_dia2)
 
+            # Compare whether cur_max is exceeded.
             if cur_max < max_one:
                     cur_max = max_one
 
