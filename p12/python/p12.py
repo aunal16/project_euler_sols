@@ -2,7 +2,7 @@
 import numpy as np
 
 ## GLOBAL VARIABLES
-LIMIT = 4
+LIMIT = 500
 
 ## VARIABLES
 search = True
@@ -17,20 +17,22 @@ def is_even(x):
     return check
 
 def find_num_of_divisors(x):
+    # Uncomment the following for numbers < 5
+    """
     if x == 1: return 1
     if x == 2: return 2
     if x == 4: return 3
+    """
 
     num_divisor = 2 # divisible by 1, and itself
     if is_even(x):
-        num_divisor += 2 # also divisible by its halve and 2
-        for num in range(3, int(x / 2)):
+        for num in range(3, int(np.sqrt(x)) + 1):
             if x % num == 0:
-                num_divisor += 1
+                num_divisor += 2
     else:
-        for num in range(3, int(x / 2), 2):
+        for num in range(3, int(np.sqrt(x)) + 1, 2):
             if x % num == 0:
-                num_divisor += 1
+                num_divisor += 2
 
     return num_divisor
 
