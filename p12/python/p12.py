@@ -17,16 +17,18 @@ def is_even(x):
     return check
 
 def find_num_of_divisors(x):
+    if x == 1: return 1
+    if x == 2: return 2
+    if x == 4: return 3
+
     num_divisor = 2 # divisible by 1, and itself
     if is_even(x):
-        num_divisor += 1 # also divisible by 2
-        # start checking divisors from 3 until sqrt(x)
-        for num in range(3, int(np.sqrt(x)) + 1):
+        num_divisor += 2 # also divisible by its halve and 2
+        for num in range(3, int(x / 2)):
             if x % num == 0:
                 num_divisor += 1
     else:
-        # start checking divisors from 3 until sqrt(x) by +2
-        for num in range(3, int(np.sqrt(x)) + 1, 2):
+        for num in range(3, int(x / 2), 2):
             if x % num == 0:
                 num_divisor += 1
 
@@ -34,6 +36,8 @@ def find_num_of_divisors(x):
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
+    for i in range(1,11):
+        print(i, is_even(i), find_num_of_divisors(i))
     while search:
         # Find the next triangle number
         triang_num += counter
