@@ -11,7 +11,10 @@ counter = 2     # first number to add first triangle_num
 
 ## FUNCTIONS
 def is_even(x):
-    pass
+    check = False
+    if x % 2 == 0:
+        check = True
+    return check
 
 def find_num_of_divisors(x):
     num_divisor = 2 # divisible by 1, and itself
