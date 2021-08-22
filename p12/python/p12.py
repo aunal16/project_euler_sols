@@ -2,7 +2,7 @@
 import numpy as np
 
 ## GLOBAL VARIABLES
-LIMIT = 500
+LIMIT = 4
 
 ## VARIABLES
 search = True
@@ -48,4 +48,4 @@ if __name__ == "__main__":
         if num_of_divisors > LIMIT:
             search = False
 
-    print("First triangle number to have over 500 divisors is", triang_num)
+    print("First triangle number to have over", LIMIT,"divisors is", triang_num)
