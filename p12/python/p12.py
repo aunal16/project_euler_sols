@@ -10,8 +10,24 @@ triang_num = 1  # first triangle number
 counter = 2     # first number to add first triangle_num
 
 ## FUNCTIONS
-def find_num_of_divisors(x):
+def is_even(x):
     pass
+
+def find_num_of_divisors(x):
+    num_divisor = 2 # divisible by 1, and itself
+    if is_even(x):
+        num_divisor += 1 # also divisible by 2
+        # start checking divisors from 3 until sqrt(x)
+        for num in range(3, int(sqrt(x)) + 1):
+            if x % num == 0:
+                num_divisor += 1
+    else:
+        # start checking divisors from 3 until sqrt(x) by +2
+        for num in range(3, int(sqrt(x)) + 1, 2):
+            if x % num == 0:
+                num_divisor += 1
+
+    return num_divisor
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
