@@ -36,8 +36,6 @@ def find_num_of_divisors(x):
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
-    for i in range(1,11):
-        print(i, is_even(i), find_num_of_divisors(i))
     while search:
         # Find the next triangle number
         triang_num += counter
