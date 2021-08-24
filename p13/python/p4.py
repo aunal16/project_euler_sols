@@ -17,7 +17,11 @@ arr_digits = np.empty([arr_size, LEN_NUM])
 # Convert strings of the input file into integers
 # and store them in array_nums. Furher, arr_digit
 for i in range(arr_size):
-    arr_nums[i] = list(map(int, lines[i]))
+    line_int_str = (lines[i]).split("\n")[0]
+    line_digits_str = list(line_int_str)
+    print(line_digits_str)
+
+    arr_nums[i] = int(line_int_str)
 
 ## FUNCTIONS
 
