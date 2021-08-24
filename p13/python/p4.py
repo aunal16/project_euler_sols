@@ -27,8 +27,15 @@ for i in range(arr_size):
     arr_digits[i, ] = line_digits
 
 ## FUNCTIONS
-def rotate_array(arr, n):
-    return arr[n:] + arr[:n]
+def rotate_array(arr, n, direction = "LS"):
+    # LS stands for Left  Shift
+    # RS stands for Right Shift
+    if direction == "LS":
+        return arr[n:] + arr[:n]
+    elif direction == "RS":
+        return arr[(len(arr) - n):] + arr [:(len(arr) - n)]
+    else:
+        return arr
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
@@ -57,18 +64,15 @@ if __name__ == "__main__":
             digit_vector[i] = (sum_vector[i] + carry) % 10
             carry = np.floor( (sum_vector[i] + carry) / 10)
 
-    while carry != 0:
-        digit_vector = deque(digit_vector)
-        digit_vector.rotate(1)
-        digit_vector = list(digit_vector)
-       
-        digit_vector[i] = carry % 10
-        carry = np.floor(carry / 10 )
-
     digit_vector = [int(x) for x in digit_vector]
+    while carry != 0:
+        #digit_vector = deque(digit_vector)
+        #digit_vector.rotate(1)
+        #digit_vector = list(digit_vector)
+        digit_vector = rotate_array(digit_vector, 1, "RS")
+               
+        digit_vector[i] = int(carry % 10)
+        carry = np.floor(carry / 10 )
     
     # print the first ten digits
     print(*digit_vector, sep = "")
-
-    my_arr = [1, 2, 3, 4, 5]
-    print(rotate_array(my_arr, 3))
