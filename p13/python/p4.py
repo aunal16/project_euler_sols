@@ -17,14 +17,16 @@ arr_digits = np.empty([arr_size, LEN_NUM])
 # Convert strings of the input file into integers
 # and store them in array_nums. Furher, arr_digit
 for i in range(arr_size):
-    line_int_str = (lines[i]).split("\n")[0]
+    line_int_str    = (lines[i]).split("\n")[0]
+    line_int        = int(line_int_str)
     line_digits_str = list(line_int_str)
-    print(line_digits_str)
+    line_digits     = list(map(int, line_digits_str))
 
-    arr_nums[i] = int(line_int_str)
+    arr_nums[i]   = line_int
+    arr_digits[i, ] = line_digits
 
 ## FUNCTIONS
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
-    print(arr_nums)
+    print(arr_digits)
