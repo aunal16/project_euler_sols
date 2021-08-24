@@ -7,7 +7,7 @@ LEN_NUM = 50
 ## OPEN, READ, CLOSE TXT FILE (SAVE NUMBERS)
 #  Open the txt file for reading and read lines
 fin = open("../numbers.txt", "r")
-lines = f.readlines()
+lines = fin.readlines()
 
 #Create an array to hold the numbers and digits
 arr_size = len(lines)
