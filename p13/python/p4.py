@@ -27,6 +27,8 @@ for i in range(arr_size):
     arr_digits[i, ] = line_digits
 
 ## FUNCTIONS
+def rotate_array(arr, n):
+    return arr[n:] + arr[:n]
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
@@ -67,3 +69,6 @@ if __name__ == "__main__":
     
     # print the first ten digits
     print(*digit_vector, sep = "")
+
+    my_arr = [1, 2, 3, 4, 5]
+    print(rotate_array(my_arr, 3))
