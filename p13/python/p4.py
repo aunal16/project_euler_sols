@@ -29,4 +29,4 @@ for i in range(arr_size):
 
 ## MAIN PROGRAM
 if __name__ == "__main__":
-    print(arr_digits)
+    print("%d" %sum(arr_nums))
