@@ -1,7 +1,8 @@
 ## IMPORT LIBRARIES
+import numpy as np
 
 ## VARIABLES
-LIMIT = 1e6
+LIMIT = 10**6
 
 ## FUNCTIONS
 def is_even(x):
@@ -17,8 +18,9 @@ def is_even(x):
 if __name__ == "__main__":
     # Set the initial starting number
     N = 2
-    max_n_terms = 1
-    max_n       = N
+
+    num_list = np.zeros((LIMIT,), dtype = int)
+    num_list [0] = 1
 
     while N < LIMIT:
 
@@ -26,19 +28,16 @@ if __name__ == "__main__":
         # Set the initial number of terms
         n_terms = 1
 
-        while n != 1:
+        while num_list[int(n - 1)] == 0:
             # Generate the next number in
             # the sequence
             if is_even(n):
                 n = n / 2
             else:
                 n = 3 * n + 1
-
             n_terms += 1
 
-        if max_n_terms < n_terms:
-            max_n_terms = n_terms
-            max_n       = N
+        num_list [int(N - 1)] = n_terms + num_list [int(n - 1)]
 
         # Increase starting number N by 1
         N += 1
