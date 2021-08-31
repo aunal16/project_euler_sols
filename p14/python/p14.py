@@ -25,6 +25,8 @@ if __name__ == "__main__":
         # Set the initial number of terms
         n_terms = 1
 
+        print(n, " -> ", end = "")
+
         while n != 1:
             # Generate the next number in
             # the sequence
